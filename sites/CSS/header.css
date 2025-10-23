@@ -2,3 +2,25 @@ header {
   width: 100vw;
   background-color: var(--SeaGreen);
 }
+
+.divHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+a#logo {
+  padding: 6%;
+}
+
+.btn,
+#btnLogin {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 100%;
+  margin: 0 35px;
+  padding: 0 16px;
+}
