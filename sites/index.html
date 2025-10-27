@@ -7,21 +7,111 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div id="hdrContainer1">
-            <a href="" id="logo">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="btns" id="hdrContainer2">
-            <a href="" class="btn" id="btnHome">Home</a>
-            <a href="" class="btn" id="btnServicos">Serviços</a>
-            <a href="" class="btn" id="btnSobreNos">Sobre nós</a>
-            <a href="" class="btn" id="btnContato">Contato</a>
-            <a href="" id="btnLogin">
-                <img src="" alt="User">
-            </a>
-        </div>
+    <header class="page-header">
+        <a href="" class="page-header__logo">
+            <img src="" alt="Logo da MicroBio">
+        </a>
+        <nav class="page-header__nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#sobre" class="nav-link">Sobre nós</a>  
+            <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+        <a href="" class="page-header__login-button" aria-label="Acessar área do cliente">
+            <img src="" alt="Ícone de login">
+        </a>
     </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero__content">
+                <h1 class="hero__title">Laboratório MicroBio: Precisão e tecnologia que geram confiança em cada resultado.</h1>
+            </div>
+        </section>
+
+        <section class="services" id="servicos">
+            <div class="services__intro">
+                <h2 class="section-title">Inteligência Laboratorial para o Sucesso do Seu Agronegócio</h2>
+            </div>
+            
+            <div class="services__grid">
+                <p class="section-subtitle">No Laboratório MicroBio, traduzimos ciência em resultados práticos...</p>
+                <div class="services__cards">
+                    <article class="service-card">
+                        <img class="service-card__icon" src="" alt="Ícone de diagnóstico agrícola">
+                        <h3 class="service-card__title">Diagnóstico Agrícola de Precisão</h3>
+                        <p class="service-card__description">Analisamos solo, tecidos vegetais e patógenos com tecnologia de ponta...</p>
+                    </article>
+                 
+                    <article class="service-card">
+                        <img class="service-card__icon" src="" alt="Ícone de pesquisa e desenvolvimento">
+                        <h3 class="service-card__title">Pesquisa & Desenvolvimento para o Campo</h3>
+                        <p class="service-card__description">Somos seu parceiro estratégico em inovação...</p>
+                    </article>
+
+                    <article class="service-card">
+                        <img class="service-card__icon" src="" alt="Ícone de controle de qualidade">
+                        <h3 class="service-card__title">Controle de Qualidade e Segurança</h3>
+                        <p class="service-card__description">Garantimos a qualidade e a segurança da sua produção...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="location" id="contato">
+            <div class="location__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115975.51469813805!2d-53.88152570273441!3d-24.718816899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3bf7558ee5bf3%3A0x1755fa3bba09eaa6!2sMicrobio!5e0!3m2!1spt-BR!2sbr!4v1761606674375!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location__directions">
+                    <h4>Como Chegar:</h4>
+                    <p>O mapa gerado com a localização de Toledo, PR. Clique no link para facilitar a visualização.</p>
+                </div>
+            </div>
+
+            <div class="location__info">
+                <h2 class="section-title">Onde a Ciência e o Campo se Encontram</h2>
+                <p class="section-subtitle">Nosso laboratório está localizado em um ponto estratégico de fácil acesso...</p>
+                
+                <div class="contact-details">
+                    <div class="contact-details__item">
+                        <img src="imagens/icone-endereco.svg" alt="Ícone de endereço">
+                        <div>
+                            <h4>Endereço:</h4>
+                            <p>Rua do Agronegócio, 123 - Centro<br>Toledo, Paraná, Brasil<br>CEP: 85900-000</p>
+                        </div>
+                    </div>
+                    <div class="contact-details__item">
+                        <img src="imagens/icone-horario.svg" alt="Ícone de horário">
+                        <div>
+                            <h4>Horário de Funcionamento:</h4>
+                            <p>Segunda a Sexta: 08:00 às 18:00<br>Sábados: 08:00 às 12:00 (Apenas para recebimento de amostras)</p>
+                        </div>
+                    </div>
+                    <div class="contact-details__item">
+                        <img src="imagens/icone-contato.svg" alt="Ícone de contato direto">
+                        <div>
+                            <h4>Contato Direto:</h4>
+                            <p>Telefone: (45) 3000-3000<br>E-mail: contato@microbiolab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="page-footer">
+        <a href="/" class="page-footer__logo">
+            <img src="imagens/logo-microbio-branco.svg" alt="Logo da MicroBio">
+        </a>
+        <div class="page-footer__contact-info">
+            <a href="tel:+5544999999999"><img src="imagens/icone-whatsapp.svg" alt="WhatsApp"> (44) 99999-9999</a>
+            <a href="mailto:microbio@gmail.com"><img src="imagens/icone-email.svg" alt="Email"> microbio@gmail.com</a>
+            <a href="tel:+554534561234"><img src="imagens/icone-telefone.svg" alt="Telefone"> 3456-1234</a>
+        </div>
+        <div class="page-footer__copyright">
+            <p>© 2025 MicroBio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
