@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --LightBlue: #90c5c8;
+  --SkyBlue: #77d1d6;
+  --LightCyan: #dcf1f2;
+  --SeaGreen: #2d6f73;
+  --DarkTurquoise: #08cdd6;
+  --DarkSlateGray: #033133;
+}
