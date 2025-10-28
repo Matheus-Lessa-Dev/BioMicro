@@ -3,7 +3,7 @@ header {
   background-color: var(--SeaGreen);
 }
 
-.divHeader {
+.page-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,16 +11,24 @@ header {
   padding: 5px 15px;
 }
 
-a#logo {
-  padding: 6%;
+.page-header__nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.btn,
-#btnLogin {
+.nav-link {
   font-weight: normal;
   text-decoration: none;
   color: white;
   font-size: 100%;
   margin: 0 35px;
-  padding: 0 16px;
+  padding: 0 8px;
+}
+
+#btnLogin {
+  background-color: var(--LightCyan);
+  margin: 0 35px;
+  padding: 16px;
+  border-radius: 8px;
 }
