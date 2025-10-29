@@ -33,6 +33,11 @@ export const imagensType = defineType({
       title: 'Imagem',
       type: 'image',
     }),
+    defineField({
+      name: 'nome',
+      title: 'nome',
+      type: 'string',
+    }),
   ],
 })
 
