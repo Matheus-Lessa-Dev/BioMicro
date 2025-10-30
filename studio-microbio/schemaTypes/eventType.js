@@ -29,6 +29,11 @@ export const imagensType = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'nome',
+      title: 'nome',
+      type: 'string',
+    }),
+    defineField({
       name: 'imagem',
       title: 'Imagem',
       type: 'image',

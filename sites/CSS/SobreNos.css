@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.SobreNos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+    margin-left: 8%;
+    color: #033133;
+    font-size: 50px;
+    
+
+}
+
+.Missao{
+    flex: 1;
+    padding-left: 8%;
+    padding-top: 2%;
+    padding-right: 8%;
+
+}
+
+.H2M{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #033133;
+    font-weight: lighter;
+
+ 
+}
+
+.textM{
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.5;
+    color: #2D6F73;
+    
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.valores{
+    display: flex;
+    justify-content: space-between;
+    background-color: #DCF1F2;
+    width: 96%;
+    height: auto;
+    padding: 2%;
+    margin: 0% 8% 0% 8%;
+    border-radius: 20px;
+}
+
+.valoresT{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.H2V{
+    font-size: 40px;
+    padding-bottom: 3%;
+    font-weight: lighter;
+
+
+}
+
+.textV{
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.5;
+    
+    color: #2D6F73;
+    margin-right: 15%;
+}
+
+.image {
+    border-radius: 10%;
+    width: 100%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    margin-right: 2%;
+}
+
+
+
+@media (max-width: 600px) {
+    .SobreNos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5%;
+        margin-left: 2%;
+    }
+    .container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .valores {
+        padding: 8% 4%;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 2%;
+    }
+    .valoresT {
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .image {
+        max-width: 90vw;
+        margin-bottom: 10px;
+        width: 80vw;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    .H2M, .H2V {
+        font-size: 34px;
+    }
+    .textM, .textV {
+        font-size: 24px;
+        margin-right: 0;
+    }
+    .Missao {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    }

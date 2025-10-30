@@ -1,0 +1,32 @@
+main {
+  margin: 3% 0% 0% 8%;
+  font-family: "Poppins", sans-serif;
+  font-size: xx-large;
+}
+.contatoTitle {
+  font-size: 32px;
+}
+.titleIcon {
+  display: flex;
+  margin-bottom: 5%;
+  gap: 1%;
+}
+.texto-dados-contatos {
+  display: flex;
+}
+.texto-contatos {
+  font-size: 25px;
+  max-width: 480px;
+}
+
+.titulo-texto {
+  margin-bottom: 8%;
+}
+
+.conteudo-texto {
+  color: #417a7d;
+  font-size: large;
+}
+.dados-contatos {
+  background-color: var(--LightCyan);
+}
