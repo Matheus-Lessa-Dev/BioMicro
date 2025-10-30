@@ -16,6 +16,8 @@
   border-radius: 48px;
   transition: all 0.2s ease;
   backdrop-filter: blur(30px);
+
+  box-shadow: -10px -10px 20px -5px rgba(0,0,0,0.20) inset, 10px 10px 20px -5px rgba(255, 255, 255, 0.2) inset;
 }
 
 .header-div {
