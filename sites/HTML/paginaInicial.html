@@ -224,29 +224,21 @@
     </footer>
 
     <script>
-      // 1. Seleciona o elemento que queremos modificar
       const elementoAlvo = document.querySelector("#header");
 
-      // 2. Define a partir de quantos pixels de scroll a mudança deve ocorrer
-      const pontoDeAtivacao = 150; // Altere este valor como quiser
+      const pontoDeAtivacao = 0.2; 
 
-      // 3. Adiciona o "ouvinte" de evento de scroll na janela
       window.addEventListener("scroll", function () {
-        // Verifica a posição atual do scroll vertical
+        
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        // 4. Lógica condicional
+       
         if (scrollTop > pontoDeAtivacao) {
-          // Se o scroll passou do ponto de ativação:
-          // Remove a classe inicial
           elementoAlvo.classList.remove("page-header");
-          // Adiciona a nova classe
           elementoAlvo.classList.add("page-header--scrolled");
         } else {
-          // Se o scroll voltou para antes do ponto de ativação:
-          // Remove a classe de scroll
+          
           elementoAlvo.classList.remove("page-header--scrolled");
-          // Adiciona a classe inicial de volta
           elementoAlvo.classList.add("page-header");
         }
       });
