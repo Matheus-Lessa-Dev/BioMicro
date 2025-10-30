@@ -15,31 +15,33 @@
     <link rel="stylesheet" href="../CSS/contatos.css" />
   </head>
   <body>
-    <header class="page-header">
-      <a href="" class="page-header__logo">
-        <img
-          src="../image/microbio-logo.png"
-          width="200"
-          alt="Logo da MicroBio"
-        />
-      </a>
-      <div class="page-header__nav-container">
-        <nav class="page-header__nav">
-          <a href="../HTML/paginaInicial.html" class="nav-link">Home</a>
-          <a href="#servicos" class="nav-link">Serviços</a>
-          <a href="#sobre" class="nav-link">Sobre nós</a>
-          <a href="../HTML/contatos.html" class="nav-link">Contato</a>
-        </nav>
-        <a
-          href=""
-          class="page-header__login-button"
-          aria-label="Acessar área do cliente"
-          id="btnLogin"
-        >
-          <img src="../image/Icon-user.svg" width="12" alt="Ícone de login" />
+    <div class="teste">
+      <header class="page-header" id="header">
+        <a href="" class="page-header__logo">
+          <img
+            src="../image/microbio-logo.png"
+            width="200"
+            alt="Logo da MicroBio"
+          />
         </a>
-      </div>
-    </header>
+        <div class="page-header__nav-container">
+          <nav class="page-header__nav">
+            <a href="../HTML/paginaInicial.html" class="nav-link">Home</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#sobre" class="nav-link">Sobre nós</a>
+            <a href="../contatos.html" class="nav-link">Contato</a>
+          </nav>
+          <a
+            href=""
+            class="page-header__login-button"
+            aria-label="Acessar área do cliente"
+            id="btnLogin"
+          >
+            <img src="../image/Icon-user.svg" width="12" alt="Ícone de login" />
+          </a>
+        </div>
+      </header>
+    </div>
     <main>
       <div class="titleIcon">
         <svg
@@ -64,7 +66,41 @@
             da precisão que impulsiona o seu agronegócio.
           </p>
         </div>
-        <div class="dados-contatos"></div>
+        <div class="dados-contatos">
+          <div class="dados-endereco">
+            <img
+              src="../image/location-icon.svg"
+              alt="Ícone de endereço"
+              class="contato-icone"
+            />
+            <h4>Endereço:</h4>
+            <p>
+              Rua do Agronegócio, 123 - Centro<br />Toledo, Paraná, Brasil<br />CEP:
+              85900-000
+            </p>
+          </div>
+          <div class="dados-funcionamento">
+            <img
+              src="../image/clock-icon.svg"
+              alt="Ícone de horário"
+              class="contato-icone"
+            />
+            <h4>Horário de Funcionamento:</h4>
+            <p>
+              Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h<br />Domingo:
+              Fechado
+            </p>
+          </div>
+          <div class="dados-contato">
+            <img
+              src="../image/user2-icon.svg"
+              alt="Ícone de contato direto"
+              class="contato-icone"
+            />
+            <h4>Contato Direto:</h4>
+            <p>Telefone: (45) 3000-3000<br />E-mail: contato@microbiolab</p>
+          </div>
+        </div>
       </div>
     </main>
     <!-- <footer class="page-footer">
