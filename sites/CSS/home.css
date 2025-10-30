@@ -30,6 +30,8 @@ main {
     font-size: 300%;
     margin-left: 6rem;
     color: var(--LightCyan);
+
+    font-weight: 500;
 }
 
 /* services */
@@ -50,6 +52,7 @@ main {
 
     & .section-title {
         font-size: 200%;
+        font-weight: 500;
 
         color: var(--SeaGreen);
     }
@@ -116,7 +119,8 @@ main {
         width: 100%;
 
         & h3 {
-            font-size: 125%;
+            font-size: 150%;
+            font-weight: 500;
         }
 
         & p {
@@ -164,6 +168,7 @@ main {
 
         & h4 {
             font-size: 125%;
+            font-weight: 500;
             color: var(--SeaGreen);
         }
 
@@ -191,6 +196,7 @@ main {
 
     & .section-title {
         font-size: 200%;
+        font-weight: 500;
         color: var(--SeaGreen);
     }
 
@@ -232,6 +238,7 @@ main {
 
         & h4 {
             font-size: 125%;
+            font-weight: 500;
             color: var(--DarkSlateGray);
         }
     }

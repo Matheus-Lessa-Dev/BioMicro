@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header" id="header">
     <a href="" class="page-header__logo">
       <img src="../image/microbio-logo.png" width="200" alt="Logo da MicroBio" />
     </a>
@@ -94,8 +94,10 @@
 
       <div class="location__info">
         <div class="location__intro">
-        <h2 class="section-title">Onde a Ciência e o Campo se Encontram</h2>
-        <p class="section-subtitle">Nosso laboratório está localizado em um ponto estratégico, de fácil acesso para receber suas amostras e para reuniões com nossa equipe de especialistas. Venha nos visitar e conhecer a estrutura por trás da precisão que impulsiona o seu agronegócio.</p>
+          <h2 class="section-title">Onde a Ciência e o Campo se Encontram</h2>
+          <p class="section-subtitle">Nosso laboratório está localizado em um ponto estratégico, de fácil acesso para
+            receber suas amostras e para reuniões com nossa equipe de especialistas. Venha nos visitar e conhecer a
+            estrutura por trás da precisão que impulsiona o seu agronegócio.</p>
         </div>
         <div class="contact-details">
           <div class="contact-details__item">
@@ -140,6 +142,34 @@
       <p>© 2025 MicroBio. Todos os direitos reservados.</p>
     </div>
   </footer>
-</body>
 
+  <script>
+        // 1. Seleciona o elemento que queremos modificar
+        const elementoAlvo = document.querySelector('#header');
+
+        // 2. Define a partir de quantos pixels de scroll a mudança deve ocorrer
+        const pontoDeAtivacao = 150; // Altere este valor como quiser
+
+        // 3. Adiciona o "ouvinte" de evento de scroll na janela
+        window.addEventListener('scroll', function() {
+            // Verifica a posição atual do scroll vertical
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            // 4. Lógica condicional
+            if (scrollTop > pontoDeAtivacao) {
+                // Se o scroll passou do ponto de ativação:
+                // Remove a classe inicial
+                elementoAlvo.classList.remove('page-header');
+                // Adiciona a nova classe
+                elementoAlvo.classList.add('page-header--scrolled');
+            } else {
+                // Se o scroll voltou para antes do ponto de ativação:
+                // Remove a classe de scroll
+                elementoAlvo.classList.remove('page-header--scrolled');
+                // Adiciona a classe inicial de volta
+                elementoAlvo.classList.add('page-header');
+            }
+        });
+    </script>
+</body>
 </html>
