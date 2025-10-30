@@ -8,13 +8,26 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
 }
 
 .page-header__nav-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 3rem;
+}
+
+.page-header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
 }
 
 .nav-link {
@@ -22,13 +35,17 @@ header {
   text-decoration: none;
   color: white;
   font-size: 100%;
-  margin: 0 35px;
-  padding: 0 8px;
+
 }
 
 #btnLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--LightCyan);
-  margin: 0 35px;
-  padding: 16px;
-  border-radius: 8px;
+  border-radius: 12px;
+
+  width: 3rem;
+  height: 3rem;
 }
