@@ -1,19 +1,19 @@
 main {
   width: 100%;
   margin: 3% 0% 0% 8%;
-  font-family: "Poppins", sans-serif;
-  font-size: xx-large;
 }
 .contatoTitle {
   font-size: 32px;
 }
 .titleIcon {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   gap: 1%;
 }
 .texto-dados-contatos {
   display: flex;
+  justify-content: flex-start;
+  gap: 10rem;
 }
 .texto-contatos {
   font-size: 25px;
@@ -30,4 +30,27 @@ main {
 }
 .dados-contatos {
   background-color: var(--LightCyan);
+  width: 40%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.contato-icone {
+  width: 2rem;
+  height: 2rem;
+}
+.dados-contato-class {
+  margin-left: 1rem;
+}
+.dados-contato-header {
+  display: flex;
+  gap: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+h4 {
+  font-size: 1.3rem;
+  color: var(--DarkSlateGray);
+}
+.dados-text {
+  color: var(--SeaGreen);
 }
