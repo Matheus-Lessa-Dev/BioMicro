@@ -1,7 +1,7 @@
-const URL2 =
+const URLmaps =
   "https://zjpvcus5.api.sanity.io/v2025-11-02/data/query/production?query=*%5B_type+%3D%3D+%22contatos%22%5D%0A%7B+rua%2C%0A++cidade%2C%0A++cep%0A%7D&perspective=drafts";
 (async () => {
-  const response = await fetch(URL2);
+  const response = await fetch(URLmaps);
   const json = await response.json();
   const result = json.result[0];
 

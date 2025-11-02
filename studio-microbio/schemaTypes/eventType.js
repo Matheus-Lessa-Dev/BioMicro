@@ -68,7 +68,7 @@ export const sociaisType = defineType({
   },
 })
 
-export const contatos = defineType({
+export const contatosType = defineType({
   name: 'contatos',
   title: 'Contatos',
   type: 'document',
