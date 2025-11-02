@@ -12,12 +12,14 @@ main {
 }
 .texto-dados-contatos {
   display: flex;
-  justify-content: flex-start;
-  gap: 10rem;
+  justify-content: space-around;
+  margin-bottom: 5%;
 }
 .texto-contatos {
   font-size: 25px;
-  max-width: 480px;
+  max-width: 460px;
+
+  margin-left: 1.5rem;
 }
 
 .titulo-texto {
@@ -30,9 +32,16 @@ main {
 }
 .dados-contatos {
   background-color: var(--LightCyan);
-  width: 40%;
+  width: 53%;
   border-radius: 10px;
   padding: 1rem;
+  margin-right: 15%;
+  margin-left: 4rem;
+
+  & h4 {
+    font-size: 1.3rem;
+    color: var(--DarkSlateGray);
+  }
 }
 .contato-icone {
   width: 2rem;
@@ -47,10 +56,99 @@ main {
   margin-top: 3%;
   margin-bottom: 3%;
 }
-h4 {
-  font-size: 1.3rem;
-  color: var(--DarkSlateGray);
-}
+
 .dados-text {
   color: var(--SeaGreen);
+}
+
+.mapa-texto {
+  margin-top: 1rem;
+  color: var(--SeaGreen);
+  width: 84%;
+}
+
+.mapa-forms {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.forms-div {
+  width: 46%;
+  padding: 1rem;
+  margin-right: 15%;
+  & h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}
+
+form.forms {
+  display: grid;
+  grid-template-areas:
+    "nome nome"
+    "gmail gmail"
+    "telefone idade"
+    "assunto assunto"
+    "botao botao";
+
+  gap: 20px;
+}
+
+.forms {
+  & .forms-resposta {
+    background-color: var(--LightCyan);
+    color: var(--DarkSlateGray);
+
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+
+    border-radius: 20px;
+    padding: 18px 25px;
+
+    box-shadow: inset -3px -5px 10px rgba(0, 0, 0, 0.153);
+
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+}
+
+form textarea.forms-resposta {
+  border-radius: 25px;
+  min-height: 100px;
+  resize: none;
+}
+
+form.forms .forms-resposta::placeholder {
+  color: var(--DarkSlateGray);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+form.forms .forms-botao {
+  background-color: #5a8f8a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 18px 25px;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  justify-self: center;
+  width: 50%;
+  min-width: 200px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+form.forms .forms-botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
