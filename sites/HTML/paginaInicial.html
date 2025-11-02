@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../CSS/header.css" />
     <link rel="stylesheet" href="../CSS/home.css" />
     <script src="../JS/navBar.js" defer></script>
+    <script src="../JS/maps.js" defer></script>
+    <script src="../JS/contatosSanity.js" defer></script>
   </head>
 
   <body>
@@ -126,23 +128,13 @@
         </div>
       </section>
 
-      <section class="location" id="contato">
+      <section class="location">
         <div class="location__map">
-          <iframe
-            id="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115975.51469813805!2d-53.88152570273441!3d-24.718816899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3bf7558ee5bf3%3A0x1755fa3bba09eaa6!2sMicrobio!5e0!3m2!1spt-BR!2sbr!4v1761606674375!5m2!1spt-BR!2sbr"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <iframe id="map" class="maps-api"></iframe>
           <div class="location__directions">
-            <h4>Como Chegar:</h4>
             <p>
-              O mapa gerado com a localização de Toledo, PR. Clique no link para
-              facilitar a visualização.
+              (O mapa gerado com a localização de Toledo, PR. Clique no link
+              para facilitar a visualização)
             </p>
           </div>
         </div>
@@ -167,10 +159,7 @@
                 />
                 <h4>Endereço:</h4>
               </div>
-              <p>
-                Rua do Agronegócio, 123 - Centro<br />Toledo, Paraná, Brasil<br />CEP:
-                85900-000
-              </p>
+              <p id="rua-cidade-cep"></p>
             </div>
             <div class="contact-details__item">
               <div class="contact-details__item-header">
@@ -181,10 +170,7 @@
                 />
                 <h4>Horário de Funcionamento:</h4>
               </div>
-              <p>
-                Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h<br />Domingo:
-                Fechado
-              </p>
+              <p id="funcionamento"></p>
             </div>
             <div class="contact-details__item">
               <div class="contact-details__item-header">
@@ -195,14 +181,14 @@
                 />
                 <h4>Contato Direto:</h4>
               </div>
-              <p>Telefone: (45) 3000-3000<br />E-mail: contato@microbiolab</p>
+              <p id="contato"></p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
       <a href="/" class="page-footer__logo">
         <img src="imagens/logo-microbio-branco.svg" alt="Logo da MicroBio" />
       </a>
@@ -222,6 +208,6 @@
       <div class="page-footer__copyright">
         <p>© 2025 MicroBio. Todos os direitos reservados.</p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
