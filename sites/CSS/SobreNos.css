@@ -7,47 +7,43 @@ main {
 .SobreNos {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #033133;
-  font-size: 50px;
+  margin-bottom: 2%;
+  gap: 1%;
+
+  & p {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  & .icone {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .Missao {
-  flex: 1;
-  padding-top: 2%;
-  padding-right: 8%;
+  max-width: 85%;
 }
 
 .H2M {
   font-size: 40px;
   font-weight: 300;
-  margin-bottom: 10px;
-  color: #033133;
+  margin-bottom: 2%;
 }
 
 .textM {
-  font-size: 25px;
+  font-size: 1.5rem;
   text-align: justify;
-  line-height: 1.5;
-  color: #2d6f73;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  color: var(--SeaGreen);
+  margin-bottom: 8%;
 }
 
 .valores {
   display: flex;
-  justify-content: space-between;
-  background-color: #dcf1f2;
-  width: 96%;
-  height: auto;
-  padding: 2%;
-  border-radius: 20px;
+  justify-content: space-around;
+  background-color: var(--LightCyan);
+  width: 90%;
+  border: 1.4rem solid var(--LightCyan);
+  border-radius: 1rem;
 }
 
 .H2V {
@@ -57,56 +53,49 @@ main {
 }
 
 .textV {
-  font-size: 23px;
+  font-size: 1.4rem;
   text-align: justify;
-  line-height: 1.5;
 
-  color: #2d6f73;
-  margin-right: 18%;
+  color: var(--SeaGreen);
+  margin-right: 10%;
 }
 
 .image {
   border-radius: 10%;
-  width: 250%;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-  margin-right: 2%;
+  width: 300%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  margin-right: 3%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1025px) {
+  main {
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
   .SobreNos {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 5%;
     margin-left: 2%;
   }
   .container {
-    margin-top: 10%;
+    width: 85%;
     margin-bottom: 10%;
     flex-direction: column;
-    align-items: stretch;
   }
   .valores {
-    padding: 8% 4%;
-    border-radius: 10px;
+    padding: 3% 6% 3% 6%;
     flex-direction: column;
-    align-items: center;
-    margin: 0 2%;
   }
   .valoresT {
-    margin-left: 0;
-    margin-top: 0;
     margin-bottom: 20px;
   }
   .image {
-    max-width: 90vw;
-    margin-bottom: 10px;
-    width: 80vw;
-    display: block;
-    margin: 0 auto 20px auto;
+    width: 100%;
   }
   .H2M,
   .H2V {
-    font-size: 34px;
+    font-size: 22px;
   }
   .textM,
   .textV {
@@ -114,7 +103,42 @@ main {
     margin-right: 0;
   }
   .Missao {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 0.2rem;
+    padding-right: 4.5rem;
+  }
+}
+@media (max-width: 426px) {
+  main {
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 1.7rem;
+  }
+  .SobreNos {
+    margin-left: 2%;
+    gap: 6%;
+  }
+  .container {
+    width: 95%;
+    margin-bottom: 10%;
+    flex-direction: column;
+  }
+  .valoresT {
+    margin-bottom: 20px;
+  }
+  .image {
+    width: 100%;
+  }
+  .H2M,
+  .H2V {
+    font-size: 24px;
+  }
+  .textM,
+  .textV {
+    width: 100%;
+    font-size: 18px;
+  }
+  .Missao {
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }

@@ -7,11 +7,13 @@ main {
 /*Contato inicial*/
 .contato-icone-titulo {
   display: flex;
+  align-items: center;
   margin-bottom: 2%;
   gap: 1%;
 
   & .contatoTitle {
     font-size: 32px;
+    font-weight: 400;
   }
   & .icone {
     width: 40px;
@@ -28,6 +30,7 @@ main {
 /*Texto inicial - Onde a ciencia...*/
 .texto-contatos {
   font-size: 1.7rem;
+  text-align: justify;
 
   max-width: 30%;
   margin-left: 1rem;
