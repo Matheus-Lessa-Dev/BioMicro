@@ -47,16 +47,6 @@ export const sociaisType = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'telefone',
-      title: 'Telefone',
-      type: 'string',
-      validation: (Rule) =>
-        Rule.regex(/^(\+55\s?)?(\(?\d{2}\)?\s?)(\d{4,5}[-\s]?\d{4})$/, {
-          name: 'telefone',
-          invert: false,
-        }).error('Formato de telefone inválido. Tente o formato (XX) XXXXX-XXXX'),
-    }),
-    defineField({
       name: 'instagram',
       title: 'instagram',
       type: 'url',
@@ -65,6 +55,94 @@ export const sociaisType = defineType({
       name: 'facebook',
       title: 'Facebook',
       type: 'url',
+    }),
+  ],
+
+  preview: {
+    prepare() {
+      return {
+        title: 'Redes sociais',
+        subtitle: 'Contato e links',
+      }
+    },
+  },
+})
+
+export const contatos = defineType({
+  name: 'contatos',
+  title: 'Contatos',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'telefone',
+      title: 'Telefone para Ligação',
+      type: 'string',
+      validation: (validacao) =>
+        validacao
+          .required()
+          .regex(/^(\+55\s?)?(\(?\d{2}\)?\s?)(\d{4,5}[-\s]?\d{4})$/, {
+            name: 'telefone',
+            invert: false,
+          })
+          .error('Formato de telefone inválido. Tente o formato (XX) XXXXX-XXXX'),
+    }),
+    defineField({
+      name: 'whats',
+      title: 'Whatsapp',
+      type: 'string',
+      validation: (validacao) =>
+        validacao
+          .required()
+          .regex(/^(\+55\s?)?(\(?\d{2}\)?\s?)(\d{4,5}[-\s]?\d{4})$/, {
+            name: 'telefone',
+            invert: false,
+          })
+          .error('Formato de telefone inválido. Tente o formato (XX) XXXXX-XXXX'),
+    }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'email',
+      validation: (Obrigatorio) => Obrigatorio.required(),
+    }),
+    defineField({
+      name: 'rua',
+      title: 'Rua, numero e bairro',
+      placeholder: 'Rua, Número - Bairro',
+      type: 'string',
+      validation: (Obrigatorio) => Obrigatorio.required(),
+    }),
+    defineField({
+      name: 'cidade',
+      title: 'Cidade, Estado, pais',
+      placeholder: 'Toledo, Paraná, Brasil',
+      type: 'string',
+      validation: (Obrigatorio) => Obrigatorio.required(),
+    }),
+    defineField({
+      name: 'cep',
+      title: 'Cep',
+      type: 'string',
+      validation: (Obrigatorio) =>
+        Obrigatorio.required()
+          .regex(/^\d{5}\-?\d{3}/, {
+            name: 'telefone',
+            invert: false,
+          })
+          .error('Formato de CEP inválido. Use XXXXX-XXX ou XXXXXXXX'),
+    }),
+    defineField({
+      name: 'horario',
+      title: 'Horário de funcionamento',
+      placeholder: 'Ex: Segunda a Sexta: 08:00 às 18:00',
+      type: 'string',
+      validation: (Obrigatorio) => Obrigatorio.required(),
+    }),
+    defineField({
+      name: 'horarioFds',
+      title: 'Horário de funcionamento - fim de semana',
+      placeholder: 'Ex: Sábado: 08:00 ao 12:00 (Apenas para recebimento de amostras)',
+      type: 'string',
     }),
   ],
 

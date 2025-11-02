@@ -1,3 +1,3 @@
-import {noticiasType, sociaisType, imagensType, unilabType} from './eventType'
+import {noticiasType, sociaisType, imagensType, contatos, unilabType} from './eventType'
 
-export const schemaTypes = [noticiasType, imagensType, sociaisType, unilabType]
+export const schemaTypes = [noticiasType, imagensType, sociaisType, contatos, unilabType]
