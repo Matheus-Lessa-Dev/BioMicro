@@ -17,10 +17,12 @@ window.addEventListener("scroll", function () {
 //É so pro forms nao dar refresh na page e limpar os campos
 //ta aq pq todas as pag vai ter esse js e eu nao quero fazer um arquivo pra 3 linhas.
 //Dificil alguem mudar, mas esse primeiro pega o form
-const form = document.querySelector("form");
+if (document.querySelector("#contato-verificacao")) {
+  const form = document.querySelector("form");
 
-form.addEventListener("submit", (prop) => {
-  //function basica pra nao dar refresh e reseta os campos, respectivamente
-  prop.preventDefault();
-  form.reset();
-});
+  form.addEventListener("submit", (prop) => {
+    //function basica pra nao dar refresh e reseta os campos, respectivamente
+    prop.preventDefault();
+    form.reset();
+  });
+}
