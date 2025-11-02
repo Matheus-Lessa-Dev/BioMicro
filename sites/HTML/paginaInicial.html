@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../CSS/root.css" />
     <link rel="stylesheet" href="../CSS/header.css" />
     <link rel="stylesheet" href="../CSS/home.css" />
+    <script src="../JS/navBar.js" defer></script>
   </head>
 
   <body>
     <div class="header-div">
       <header class="page-header" id="header">
-        <a href="" class="page-header__logo">
+        <a class="page-header__logo">
           <img
             src="../image/microbio-logo.png"
             width="200"
@@ -21,10 +22,10 @@
         </a>
         <div class="page-header__nav-container">
           <nav class="page-header__nav">
-            <a href="../HTML/paginaInicial.html" class="nav-link">Home</a>
-            <a href="#servicos" class="nav-link">Serviços</a>
-            <a href="#sobre" class="nav-link">Sobre nós</a>
-            <a href="../contatos.html" class="nav-link">Contato</a>
+            <a href="" class="nav-link">Home</a>
+            <a href="../HTML/servicos.html" class="nav-link">Serviços</a>
+            <a href="../HTML/Sobrenos.html" class="nav-link">Sobre nós</a>
+            <a href="../HTML/contatos.html" class="nav-link">Contato</a>
           </nav>
           <a
             href=""
@@ -222,26 +223,5 @@
         <p>© 2025 MicroBio. Todos os direitos reservados.</p>
       </div>
     </footer>
-
-    <script>
-      const elementoAlvo = document.querySelector("#header");
-
-      const pontoDeAtivacao = 0.2; 
-
-      window.addEventListener("scroll", function () {
-        
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-       
-        if (scrollTop > pontoDeAtivacao) {
-          elementoAlvo.classList.remove("page-header");
-          elementoAlvo.classList.add("page-header--scrolled");
-        } else {
-          
-          elementoAlvo.classList.remove("page-header--scrolled");
-          elementoAlvo.classList.add("page-header");
-        }
-      });
-    </script>
   </body>
 </html>
