@@ -124,12 +124,10 @@ export const contatosType = defineType({
       title: 'Cep',
       type: 'string',
       validation: (Obrigatorio) =>
-        Obrigatorio.required()
-          .regex(/^\d{5}\-?\d{3}/, {
-            name: 'telefone',
-            invert: false,
-          })
-          .error('Formato de CEP inválido. Use XXXXX-XXX ou XXXXXXXX'),
+        Obrigatorio.regex(/^\d{5}\-?\d{3}/, {
+          name: 'telefone',
+          invert: false,
+        }).error('Formato de CEP inválido. Use XXXXX-XXX ou XXXXXXXX'),
     }),
     defineField({
       name: 'horario',
@@ -149,8 +147,8 @@ export const contatosType = defineType({
   preview: {
     prepare() {
       return {
-        title: 'Redes sociais',
-        subtitle: 'Contato e links',
+        title: 'Contatos',
+        subtitle: 'Contato e localização',
       }
     },
   },
