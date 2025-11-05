@@ -236,3 +236,154 @@ main {
     color: var(--SeaGreen);
   }
 }
+
+
+/*Responsividade contatos*/
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: center center;
+  }
+
+  .hero__title {
+    font-size: 200%;
+    margin-left: 3rem;
+  }
+
+
+  .services__intro {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+
+    & .section-title {
+      font-size: 150%;
+    }
+  }
+
+
+  .services__grid {
+    & .section-subtitle {
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-size: 125%;
+    }
+
+    & .services__cards {
+      flex-direction: column;
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+  .service-card {
+    flex-direction: row;
+    width: 100%;
+
+
+    & .service-card__icon {
+      width: 6rem;
+      height: 6rem;
+      margin-bottom: 0;
+    }
+
+    & .service-card__content {
+
+      & h3 {
+        font-size: 125%;
+        margin: 0;
+      }
+
+      & p {
+        font-size: 90%;
+        margin: 0;
+      }
+
+    }
+  }
+
+  .location {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .location__map {
+    width: 100%;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    width: 100%;
+
+    & .maps-api {
+      height: 32rem;
+      width: 32rem;
+    }
+
+    & .location__directions {
+      font-size: 90%;
+      width: 32rem;
+    }
+  }
+
+  .location__info {
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    gap: 2rem;
+
+    & .location__intro {
+      gap: 1rem;
+
+      & .section-title {
+        font-size: 150%;
+      }
+
+      & .section-subtitle {
+        font-size: 100%;
+      }
+    }
+
+    .contact-details {
+      height: auto;
+      gap: 2rem;
+
+      & .contact-details__item {
+        & .contact-details__item-header {
+          & .icons-contact {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
+          & h4 {
+            font-size: 100%;
+          }
+        }
+
+        & p {
+          font-size: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .hero {
+    height: 32rem;
+
+    background-size: auto 32rem;
+    background-repeat: no-repeat;
+  }
+  
+  .hero__content {
+    width: 80%;
+    height: 50%;
+
+  }
+  
+  .hero__title {
+    font-size: 150%;
+  }
+}
