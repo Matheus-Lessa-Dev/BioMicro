@@ -258,6 +258,7 @@ main {
 
 
     & .section-title {
+      text-align: center;
       font-size: 150%;
     }
   }
@@ -311,7 +312,6 @@ main {
   }
 
   .location__map {
-    width: 100%;
     margin-bottom: 3rem;
     gap: 1rem;
     width: 100%;
@@ -385,5 +385,100 @@ main {
   
   .hero__title {
     font-size: 150%;
+  }
+
+  .services__intro {
+    & .section-title {
+      text-align: center;
+      font-size: 100%;
+    }
+  }
+
+  .services__grid {
+      & .section-subtitle {
+        font-size: 100%;
+      }
+
+      & .services__cards {
+        gap: 1rem;
+
+        & .service-card {
+          flex-direction: column;
+          width: 100%;
+
+          & .service-card__icon {
+            width: 5rem;
+            height: 5rem;
+          }
+
+          & .service-card__content {
+
+            & h3 {
+              font-size: 100%;
+            }
+
+            & p {
+              font-size: 90%;
+            }
+
+          }
+        }
+    }
+  }
+
+  .location__map {
+    height: auto;
+    margin-bottom: 0;
+
+    & .maps-api {
+      height: 18rem;
+      width: 18rem;
+
+    }
+
+    & .location__directions {
+      font-size: 80%;
+      width: 18rem;
+      height: auto;
+
+      
+
+      & p {
+        margin: 0 0.5rem;
+        text-align: justify;
+        height: auto;
+      }
+    }
+  }
+
+  .location__info {
+    & .location__intro {
+      & .section-title {
+        font-size: 100%;
+      }
+
+      & .section-subtitle {
+        font-size: 90%;
+      }
+    }
+
+    .contact-details {
+      & .contact-details__item {
+        & .contact-details__item-header {
+          & .icons-contact {
+            width: 1rem;
+            height: 1rem;
+          }
+
+          & h4 {
+            font-size: 90%;
+          }
+        }
+
+        & p {
+          font-size: 80%;
+        }
+      }
+    }
   }
 }
