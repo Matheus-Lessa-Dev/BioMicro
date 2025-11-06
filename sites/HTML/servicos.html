@@ -3,6 +3,7 @@
 <!-- git push -u origin servicos -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,54 @@
     <link rel="stylesheet" href="../CSS/root.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/servicos.css">
+    <script src="../JavaScript/navbar.js"></script>
+    <script src="../JavaScript/servicos.js"></script>
 </head>
+
 <body>
-    <header class="page-header">
-        <a href="" class="page-header__logo">
-            <img src="../image/microbio-logo.png" width="200" alt="Logo da MicroBio">
+    <div class="header-div">
+      <header class="page-header" id="header">
+        <a class="page-header__logo">
+          <img
+            src="../image/microbio-logo.png"
+            width="200"
+            alt="Logo da MicroBio"
+          />
         </a>
         <div class="page-header__nav-container">
-            <nav class="page-header__nav">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#sobre" class="nav-link">Sobre nós</a>  
-                <a href="#contato" class="nav-link">Contato</a>
-            </nav>
-            <a href="" class="page-header__login-button" aria-label="Acessar área do cliente" id="btnLogin">
-                <img src="../image/Icon-user.svg" width="12" alt="Ícone de login">
-            </a>
+          <nav class="page-header__nav">
+            <a href="../HTML/paginaInicial.html" class="nav-link">Home</a>
+            <a href="" class="nav-link">Serviços</a>
+            <a href="../HTML/Sobrenos.html" class="nav-link">Sobre nós</a>
+            <a href="../HTML/contatos.html" class="nav-link">Contato</a>
+          </nav>
+          <a
+            href=""
+            class="page-header__login-button"
+            aria-label="Acessar área do cliente"
+            id="btnLogin"
+          >
+            <img src="../image/Icon-user.svg" width="12" alt="Ícone de login" />
+          </a>
         </div>
-    </header>
+      </header>
+    </div>
     <main>
         <div class="service_title">
+            <img src="../image/icon-services.svg" alt="">
             <h1>Serviços</h1>
         </div>
-    <section class="hero" id="servicos"></section>
-    <div class="exam_result">
-        <h1>Acesse seus resultados</h1>
-        <p>Consulte o status e os resultados de suas análises.</p>
-    </div>
+        <section class="hero" id="servicos">
+            <h1>Análise de solo</h1>
+            <p>O solo é o seu ativo mais valioso. Entender o que ele precisa é o primeiro passo para uma safra de sucesso. Com nossa análise de solo, você substitui a incerteza pela ciência, tomando decisões precisas que maximizam seu investimento e o potencial da sua lavoura.</p>
+            <img src="../image/banner2.png" alt="imagem">
+        </section>
+        <div class="exam_result">
+            <h1>Acesse seus resultados</h1>
+            <p>Consulte o status e os resultados de suas análises.</p>
+            <a href="https://microbio.uniexames.com.br/cms/inicio" target="_blank">Acessar</a>
+        </div>
     </main>
 </body>
-<script src="servicos.js"></script>
+<script src="../JS/navBar.js"></script>
 </html>
