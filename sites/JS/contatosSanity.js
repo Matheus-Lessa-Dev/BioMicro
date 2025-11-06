@@ -15,11 +15,14 @@ const URLaddress =
     const divCidade = document.createElement("div");
     divCidade.append(data.cidade);
 
-    const divCep = document.createElement("div");
-    divCep.append("CEP: ");
-    divCep.append(data.cep);
+    anchor.append(divRua, divCidade);
+    if (data.cep) {
+      const divCep = document.createElement("div");
+      divCep.append("CEP: ");
+      divCep.append(data.cep);
 
-    anchor.append(divRua, divCidade, divCep);
+      anchor.append(divCep);
+    }
   }
 })();
 
@@ -38,7 +41,7 @@ const URLbusinessHours =
 
     anchor.append(divFuncionamento);
 
-    if (data.horarioFds != null) {
+    if (data.horarioFds) {
       const divFuncionamentoFds = document.createElement("div");
       divFuncionamentoFds.append(data.horarioFds);
       anchor.append(divFuncionamentoFds);
