@@ -68,6 +68,7 @@ main {
     margin-top: 3%;
   }
   & .dados-text {
+    min-height: 40px;
     color: var(--SeaGreen);
   }
 }
