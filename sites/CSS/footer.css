@@ -1,0 +1,49 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  background-color: var(--SeaGreen);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+
+  & .logo {
+    height: 4rem;
+    background-color: #08cdd6;
+  }
+
+  & .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.cop_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  background-color: #dcf1f2;
+
+  width: 2rem;
+  height: 2rem;
+}
