@@ -68,7 +68,7 @@
   font-size: 100%;
 }
 
-#btnLogin {
+.page-header__login-button {
   display: flex;
   align-items: center;
   justify-content: center;

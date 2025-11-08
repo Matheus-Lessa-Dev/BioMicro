@@ -46,7 +46,7 @@ main {
     z-index: 1;
     width: 40%;
   }
-  
+
   & img {
     position: absolute;
     z-index: 0;
@@ -80,7 +80,7 @@ main {
 
   & a {
     font-size: 150%;
-    color: var(--White);
+    color: White;
     text-align: center;
 
     background-color: var(--SeaGreen);
@@ -92,52 +92,107 @@ main {
 
 @media (max-width: 1025px) {
   .service_title {
-  margin-left: 4rem;
+    margin-left: 4rem;
 
-  & img {
-    width: 3rem;
-    height: 3rem;
+    & img {
+      width: 3rem;
+      height: 3rem;
+    }
   }
-}
-  .hero{ 
-  & img {
-    width: 115%;
-  }
-  & h1 {
-    padding-left: 4rem;
-  }
-  & p {
-    padding-left: 4rem;
-    width: 55%;
-  }
+  .hero {
+    & img {
+      width: 100%;
+    }
+    & h1 {
+      padding-left: 4rem;
+    }
+    & p {
+      padding-left: 4rem;
+      width: 55%;
+    }
   }
   .exam_result {
-  padding-left: 4rem;
-}
+    padding-left: 4rem;
+  }
 }
 @media (max-width: 769px) {
-  .service_title{
-    padding-left: 2rem;
+  .service_title {
+    padding-left: 0rem;
   }
-  .hero{ 
- 
-  & img {
-    width: 150%;
-  }
+  .hero {
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
+    & img {
+      width: 100%;
+      height: 86%;
+    }
 
-  & h1 {
-    padding-left: 2rem;
-  }
+    & h1 {
+      padding-left: 4rem;
+    }
 
-  & p {
-    padding-left: 2rem;
-    width: 65%;
+    & p {
+      padding-left: 4rem;
+      width: 65%;
+    }
+    .exam_result {
+      padding-left: 0rem;
+    }
   }
-  .exam_result {
-    padding-left: 2rem;
-  }
-}
 }
 @media (max-width: 426px) {
+  .service_title {
+    gap: 0.5rem;
+    margin-left: 3rem;
+  }
+  .hero {
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
+    & img {
+      width: 100%;
+      height: 90%;
+    }
+    & h1 {
+      font-size: 21px;
+      padding-right: 0.5rem;
+      padding-left: 3rem;
+      margin-top: 0.5rem;
+    }
+    & p {
+      width: 120%;
+      font-size: 17px;
+      color: var(--DarkSlateGray);
+      padding-right: 1rem;
+      padding-left: 3rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .exam_result {
+    gap: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 3rem;
+    margin-top: 0.5rem;
 
+    & h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--DarkGray);
+    }
+
+    & p {
+      font-size: 18px;
+      color: var(--SeaGreen);
+      text-align: justify;
+    }
+
+    & a {
+      font-size: 120%;
+      text-align: center;
+
+      background-color: var(--SeaGreen);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+  }
 }
