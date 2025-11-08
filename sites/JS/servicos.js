@@ -20,9 +20,9 @@ async function carregarServicos() {
         divImg.classlist.add("card-media");
         divImg.append(img);
 
-        const h2 = document.createElement("h2");
-        h2.classList.add("card-title");
-        h2.innerText = element.titulo;
+        const h1 = document.createElement("h1");
+        h1.classList.add("card-title");
+        h1.innerText = element.titulo;
 
         const p = document.createElement("p");
         p.classList.add("card-desc");

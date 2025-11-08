@@ -42,8 +42,7 @@ main {
   justify-content: space-around;
   background-color: var(--LightCyan);
   width: 90%;
-  border: 1.4rem solid var(--LightCyan);
-  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .H2V {

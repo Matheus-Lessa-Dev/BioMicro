@@ -48,8 +48,7 @@ main {
   padding: 0.5rem;
 
   border-radius: 1rem;
-  border: 1rem solid var(--LightCyan);
-  border-top: none;
+  padding: 0rem 1rem 1rem 1rem;
 
   margin-right: 15%;
   margin-left: 4rem;
@@ -94,8 +93,7 @@ main {
     width: 70%;
 
     border-radius: 1rem;
-    border: 1rem solid inherit;
-    border-top: none;
+    padding: 0rem 1rem 1rem 1rem;
 
     margin-left: 0.5rem;
 
@@ -156,8 +154,7 @@ main {
     width: 89%;
 
     border-radius: 1rem;
-    border: 1rem solid inherit;
-    border-top: none;
+    padding: 0rem 1rem 1rem 1rem;
 
     & h4 {
       color: var(--DarkSlateGray);
