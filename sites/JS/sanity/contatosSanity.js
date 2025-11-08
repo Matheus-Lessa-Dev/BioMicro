@@ -1,4 +1,4 @@
-const URL =
+const URLcontatos =
   "https://zjpvcus5.api.sanity.io/v2025-11-02/data/query/production?query=*%5B_type+%3D%3D+%22contatos%22%5D%0A%7B+rua%2C%0A++cidade%2C%0A++cep%2C%0A++email%2C%0A++horario%2C%0A++horarioFds%2C%0A++telefone%2C%0A++whats%0A%7D&perspective=drafts";
 async function renderData(result) {
   const anchorAddress = document.querySelector("#rua-cidade-cep");
@@ -56,7 +56,7 @@ async function renderData(result) {
   }
 
   try {
-    const response = await fetch(URL);
+    const response = await fetch(URLcontatos);
     const json = await response.json();
     const result = json.result;
 
