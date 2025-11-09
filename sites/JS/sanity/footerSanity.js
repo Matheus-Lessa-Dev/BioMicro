@@ -3,7 +3,9 @@ const URLfooter =
 
 async function renderFooter(data) {
   document.getElementById("insta-footer").href = data.social.instagram;
-  document.getElementById("whats-footer").href = data.social.whats;
+  document.getElementById(
+    "whats-footer"
+  ).href = `https://api.whatsapp.com/send/?phone=${data.social.whats}&text=Estou+entrando+em+contato+atrav%C3%A9s+do+site&type=phone_number&app_absent=0`;
   document.getElementById("facebook-footer").href = data.social.facebook;
 
   document.getElementById("email-footer").append(data.contato.email);
