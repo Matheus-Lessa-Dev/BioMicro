@@ -1,6 +1,7 @@
 footer {
   padding-left: 6rem;
   padding-right: 6rem;
+  padding-bottom: 1rem;
 
   background-color: var(--SeaGreen);
 }
@@ -15,7 +16,20 @@ footer {
     height: 3.5rem;
   }
 }
+.localizacao-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  font-size: large;
+  color: var(--LightCyan);
+}
+.a {
+  height: 6rem;
+  width: 1.5px;
+  background-color: rgba(255, 255, 255, 0.377);
+  margin: 0 1.25rem;
+}
 .links {
   display: flex;
   justify-content: flex-end;
