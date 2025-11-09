@@ -1,0 +1,41 @@
+const URLfooter =
+  "https://zjpvcus5.api.sanity.io/v2025-11-09/data/query/production?query=%7B%0A++%22contato%22%3A+*%5B_type+%3D%3D+%22contatos%22%5D%5B0%5D%7B%0A++++email%2C%0A++++telefone%2C%0A++++rua%2C%0A++++cidade%0A++%7D%2C%0A++%22social%22%3A+*%5B_type+%3D%3D+%22sociais%22%5D%5B0%5D%7B%0A++++instagram%2C%0A++++facebook%2C%0A++++whats%0A++%7D%0A%7D%0A&perspective=drafts";
+
+async function renderFooter(data) {
+  document.getElementById("insta-footer").href = data.social.instagram;
+  document.getElementById("whats-footer").href = data.social.whats;
+  document.getElementById("facebook-footer").href = data.social.facebook;
+
+  document.getElementById("email-footer").append(data.contato.email);
+  document.getElementById("telefone-footer").append(data.contato.telefone);
+
+  const anchorContatos = document.querySelector("#contatos-footer");
+
+  const pRua = document.createElement("p");
+  const pCidade = document.createElement("p");
+
+  pRua.append(data.contato.rua);
+  pCidade.append(data.contato.cidade);
+
+  anchorContatos.append(pRua, pCidade);
+}
+
+(async () => {
+  const cachedFooter = localStorage.getItem("footerData");
+  let cachedData = cachedFooter ? JSON.parse(cachedFooter) : null;
+
+  if (cachedData) renderFooter(cachedData);
+
+  try {
+    const response = await fetch(URLfooter);
+    const json = await response.json();
+    const result = json.result;
+
+    if (JSON.stringify(result) !== JSON.stringify(cachedData)) {
+      renderFooter(result);
+      localStorage.setItem("footerData", JSON.stringify(result));
+    }
+  } catch (error) {
+    console.error("Cache error:", error);
+  }
+})();

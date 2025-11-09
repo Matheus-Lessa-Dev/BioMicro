@@ -1,13 +1,13 @@
 const URLcontatos =
   "https://zjpvcus5.api.sanity.io/v2025-11-02/data/query/production?query=*%5B_type+%3D%3D+%22contatos%22%5D%0A%7B+rua%2C%0A++cidade%2C%0A++cep%2C%0A++email%2C%0A++horario%2C%0A++horarioFds%2C%0A++telefone%2C%0A++whats%0A%7D&perspective=drafts";
-async function renderData(result) {
+async function renderContatos(result) {
   const anchorAddress = document.querySelector("#rua-cidade-cep");
   const anchorBusinessHours = document.querySelector("#funcionamento");
   const anchorContact = document.querySelector("#contato");
 
-  anchorAddress.innerHTML = "";
-  anchorBusinessHours.innerHTML = "";
-  anchorContact.innerHTML = "";
+  [anchorAddress, anchorBusinessHours, anchorContact].forEach(
+    (data) => (data.innerHTML = "")
+  );
 
   for (const data of result) {
     const divRua = document.createElement("div");
@@ -42,18 +42,10 @@ async function renderData(result) {
 }
 
 (async () => {
-  const cached = localStorage.getItem("contatosData");
-  let cachedData = null;
+  const cachedContact = localStorage.getItem("contatosData");
+  let cachedData = cachedContact ? JSON.parse(cachedContact) : null;
 
-  if (cached) {
-    try {
-      const data = JSON.parse(cached);
-      renderData(data);
-    } catch (error) {
-      console.warn("Invalid cache");
-      localStorage.removeItem("contatosData");
-    }
-  }
+  if (cachedData) renderContatos(cachedData);
 
   try {
     const response = await fetch(URLcontatos);
@@ -61,7 +53,7 @@ async function renderData(result) {
     const result = json.result;
 
     if (JSON.stringify(result) !== JSON.stringify(cachedData)) {
-      renderData(result);
+      renderContatos(result);
       localStorage.setItem("contatosData", JSON.stringify(result));
     }
   } catch (error) {

@@ -50,11 +50,26 @@ export const sociaisType = defineType({
       name: 'instagram',
       title: 'instagram',
       type: 'url',
+      validation: (validacao) => validacao.required(),
     }),
     defineField({
       name: 'facebook',
       title: 'Facebook',
       type: 'url',
+      validation: (validacao) => validacao.required(),
+    }),
+    defineField({
+      name: 'whats',
+      title: 'Whatsapp',
+      type: 'string',
+      validation: (validacao) =>
+        validacao
+          .required()
+          .regex(/^(\+55\s?)?(\(?\d{2}\)?\s?)(\d{4,5}[-\s]?\d{4})$/, {
+            name: 'telefone',
+            invert: false,
+          })
+          .error('Formato de telefone inválido. Tente o formato (XX) XXXXX-XXXX'),
     }),
   ],
 
@@ -76,19 +91,6 @@ export const contatosType = defineType({
     defineField({
       name: 'telefone',
       title: 'Telefone para Ligação',
-      type: 'string',
-      validation: (validacao) =>
-        validacao
-          .required()
-          .regex(/^(\+55\s?)?(\(?\d{2}\)?\s?)(\d{4,5}[-\s]?\d{4})$/, {
-            name: 'telefone',
-            invert: false,
-          })
-          .error('Formato de telefone inválido. Tente o formato (XX) XXXXX-XXXX'),
-    }),
-    defineField({
-      name: 'whats',
-      title: 'Whatsapp',
       type: 'string',
       validation: (validacao) =>
         validacao
