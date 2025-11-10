@@ -2,7 +2,6 @@ const URLfooter =
   "https://zjpvcus5.api.sanity.io/v2025-11-09/data/query/production?query=%7B%0A++%22contato%22%3A+*%5B_type+%3D%3D+%22contatos%22%5D%5B0%5D%7B%0A++++email%2C%0A++++telefone%2C%0A++++rua%2C%0A++++cidade%0A++%7D%2C%0A++%22social%22%3A+*%5B_type+%3D%3D+%22sociais%22%5D%5B0%5D%7B%0A++++instagram%2C%0A++++facebook%2C%0A++++whats%0A++%7D%0A%7D%0A&perspective=drafts";
 
 async function renderFooter(data) {
-  console.log(data);
   document.getElementById("insta-footer").href = data.social.instagram;
   document.getElementById(
     "whats-footer"
