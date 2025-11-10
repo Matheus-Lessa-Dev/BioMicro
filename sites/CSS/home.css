@@ -107,6 +107,7 @@ main {
   flex: 0 0 calc(33.333% - 0.6rem);
   scroll-snap-align: start;
   background: #000;
+  margin-left: 2.2px;
 
   overflow-y: auto;
   overflow-x: hidden;
