@@ -6,55 +6,65 @@ async function renderContatos(result) {
   const anchorContact = document.querySelector("#contato");
 
   [anchorAddress, anchorBusinessHours, anchorContact].forEach(
-    (data) => (data.innerHTML = "")
+    (result) => (result.innerHTML = "")
   );
 
-  for (const data of result) {
-    const divRua = document.createElement("div");
-    divRua.append(data.rua);
+  const divRua = document.createElement("div");
+  divRua.append(result.rua);
 
-    const divCidade = document.createElement("div");
-    divCidade.append(data.cidade);
-
+  const divCidade = document.createElement("div");
+  divCidade.append(result.cidade);
+  if (result.cep != null) {
     const divCep = document.createElement("div");
     divCep.append("CEP: ");
-    divCep.append(data.cep);
-
-    const divFuncionamento = document.createElement("div");
-    divFuncionamento.append(data.horario);
-
-    if (data.horarioFds != null) {
-      const divFuncionamentoFds = document.createElement("div");
-      divFuncionamentoFds.append(data.horarioFds);
-
-      anchorBusinessHours.append(divFuncionamentoFds);
-    }
-    const divTelefone = document.createElement("div");
-    divTelefone.append(`Telefone: ${data.telefone}`);
-
-    const divEmail = document.createElement("div");
-    divEmail.append(`E-mail: ${data.email}`);
+    divCep.append(result.cep);
 
     anchorAddress.append(divRua, divCidade, divCep);
-    anchorBusinessHours.append(divFuncionamento);
-    anchorContact.append(divTelefone, divEmail);
+  } else {
+    anchorAddress.append(divRua, divCidade);
   }
+
+  const divFuncionamento = document.createElement("div");
+  divFuncionamento.append(result.horario);
+
+  if (result.horarioFds != null) {
+    const divFuncionamentoFds = document.createElement("div");
+    divFuncionamentoFds.append(result.horarioFds);
+
+    anchorBusinessHours.append(divFuncionamento, divFuncionamentoFds);
+  } else {
+    anchorBusinessHours.append(divFuncionamento);
+  }
+  const divTelefone = document.createElement("div");
+  divTelefone.append(`Telefone: ${result.telefone}`);
+
+  const divEmail = document.createElement("div");
+  divEmail.append(`E-mail: ${result.email}`);
+
+  anchorContact.append(divTelefone, divEmail);
 }
 
 (async () => {
   const cachedContact = localStorage.getItem("contatosData");
-  let cachedData = cachedContact ? JSON.parse(cachedContact) : null;
+  let cachedData = null;
 
-  if (cachedData) renderContatos(cachedData);
+  try {
+    if (cachedContact) {
+      cachedData = JSON.parse(cachedContact);
+      renderContatos(cachedData);
+    }
+  } catch (error) {
+    console.warn("Failed to parse cached contact:", error);
+  }
 
   try {
     const response = await fetch(URLcontatos);
     const json = await response.json();
     const result = json.result;
 
-    if (JSON.stringify(result) !== JSON.stringify(cachedData)) {
-      renderContatos(result);
-      localStorage.setItem("contatosData", JSON.stringify(result));
+    if (JSON.stringify(result[0]) !== JSON.stringify(cachedData)) {
+      renderContatos(result[0]);
+      localStorage.setItem("contatosData", JSON.stringify(result[0]));
     }
   } catch (error) {
     console.error("Cache error = " + error);

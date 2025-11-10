@@ -170,7 +170,7 @@ export const unilabType = defineType({
   preview: {
     prepare() {
       return {
-        name: 'Link Unilab',
+        title: 'Link Unilab',
       }
     },
   },
