@@ -78,52 +78,58 @@ main {
   }
 }
 
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
 .services__cards {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 2rem;
-
-  margin-left: 6rem;
-  margin-right: 6rem;
+  gap: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 .service-card {
+  flex: 0 0 calc(33.333% - 10px);
   background-color: var(--LightCyan);
   border-radius: 12px;
   padding: 2rem;
-  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+}
 
+.buttons-carrosel {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  gap: 4rem;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
 
-  & .service-card__icon {
-    width: 8rem;
-    height: 8rem;
+.prev,
+.next {
+  background: var(--SeaGreen);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  pointer-events: all;
+  transition: background 0.3s;
+}
 
-    margin-bottom: 1rem;
-  }
-
-  & .service-card__content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: var(--SeaGreen);
-    width: 100%;
-
-    & h3 {
-      font-size: 150%;
-      font-weight: 500;
-    }
-
-    & p {
-      font-size: 100%;
-      text-align: justify;
-    }
-  }
+.prev:hover,
+.next:hover {
+  background: var(--SeaGreenHover, #0a7a5c);
 }
 
 /* location */
@@ -237,7 +243,6 @@ main {
   }
 }
 
-
 /*Responsividade contatos*/
 @media screen and (max-width: 768px) {
   .hero {
@@ -249,20 +254,17 @@ main {
     margin-left: 3rem;
   }
 
-
   .services__intro {
     margin-left: 3rem;
     margin-right: 3rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
 
-
     & .section-title {
       text-align: center;
       font-size: 150%;
     }
   }
-
 
   .services__grid {
     & .section-subtitle {
@@ -282,7 +284,6 @@ main {
     flex-direction: row;
     width: 100%;
 
-
     & .service-card__icon {
       width: 6rem;
       height: 6rem;
@@ -290,7 +291,6 @@ main {
     }
 
     & .service-card__content {
-
       & h3 {
         font-size: 125%;
         margin: 0;
@@ -300,7 +300,6 @@ main {
         font-size: 90%;
         margin: 0;
       }
-
     }
   }
 
@@ -376,13 +375,12 @@ main {
     background-size: auto 32rem;
     background-repeat: no-repeat;
   }
-  
+
   .hero__content {
     width: 80%;
     height: 50%;
-
   }
-  
+
   .hero__title {
     font-size: 150%;
   }
@@ -395,34 +393,32 @@ main {
   }
 
   .services__grid {
-      & .section-subtitle {
-        font-size: 100%;
-      }
+    & .section-subtitle {
+      font-size: 100%;
+    }
 
-      & .services__cards {
-        gap: 1rem;
+    & .services__cards {
+      gap: 1rem;
 
-        & .service-card {
-          flex-direction: column;
-          width: 100%;
+      & .service-card {
+        flex-direction: column;
+        width: 100%;
 
-          & .service-card__icon {
-            width: 5rem;
-            height: 5rem;
+        & .service-card__icon {
+          width: 5rem;
+          height: 5rem;
+        }
+
+        & .service-card__content {
+          & h3 {
+            font-size: 100%;
           }
 
-          & .service-card__content {
-
-            & h3 {
-              font-size: 100%;
-            }
-
-            & p {
-              font-size: 90%;
-            }
-
+          & p {
+            font-size: 90%;
           }
         }
+      }
     }
   }
 
@@ -433,15 +429,12 @@ main {
     & .maps-api {
       height: 18rem;
       width: 18rem;
-
     }
 
     & .location__directions {
       font-size: 80%;
       width: 18rem;
       height: auto;
-
-      
 
       & p {
         margin: 0 0.5rem;
