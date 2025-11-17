@@ -271,7 +271,7 @@ main {
   }
 }
 
-/*Responsividade contatos*/
+/*Responsividade home*/
 @media screen and (max-width: 768px) {
   .hero {
     background-position: center center;

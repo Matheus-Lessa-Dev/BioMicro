@@ -79,3 +79,36 @@
   width: 3rem;
   height: 3rem;
 }
+
+
+@media screen and (max-width: 768px) {
+  .page-header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .imagem-logo {
+    width: 150px;
+  }
+
+  .page-header--scrolled {
+    width: 90vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .page-header__nav {
+
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 90%;
+  }
+
+  .page-header__login-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
