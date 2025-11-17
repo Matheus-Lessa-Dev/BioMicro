@@ -84,6 +84,9 @@ main {
   justify-content: center;
   position: relative;
   width: 100%;
+
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .services__cards {
@@ -93,6 +96,7 @@ main {
   width: 100%;
   max-width: 100%;
   position: relative;
+  
 }
 
 .service-card {
