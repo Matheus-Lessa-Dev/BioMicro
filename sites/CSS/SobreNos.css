@@ -14,44 +14,48 @@ main {
   & p {
     font-size: 32px;
     font-weight: 400;
+
   }
   & .icone {
     width: 40px;
     height: 40px;
+
   }
 }
 
 .divConteudo {
-  max-width: 85%;
+  
   display: flex;
   justify-content: space-between;
     margin-left: 8rem;
 }
-.Missao{
+.Missao_container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-    margin-bottom: 8%;
+    gap: 2rem;
+
 }
 
 .H2M {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 2%;
+
+  display: flex;
+
   align-items: center;
   justify-content: center;
+
 }
 
 .textM {
   font-size: 1.5rem;
   text-align: justify;
+
   color: var(--SeaGreen);
-  margin-bottom: 8%;
 }
 
-.valores {
+.Valores_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,19 +66,19 @@ main {
 }
 
 .H2V {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: 2%;
   align-items: center;
   justify-content: center;
+  justify-content: center;
 }
 
 .textV {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: justify;
 
   color: var(--SeaGreen);
-  margin-right: 10%;
 }
 
 .banner {
@@ -113,22 +117,29 @@ main {
 
 @media (max-width: 1025px) {
   main {
-    width: 100%;
-    margin-top: 3rem;
-    margin-left: 3.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .divConteudo {
+    gap: 3rem;
   }
 }
 @media (max-width: 768px) {
-  .SobreNos {
-    margin-left: 2%;
+  .SobreNos{
+    gap: 1rem;
+
+    & .icone {
+      width: 30px;
+      height: 30px;
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
   }
-  .container {
-    width: 85%;
-    margin-bottom: 10%;
-    flex-direction: column;
-  }
-  .valores {
-    padding: 3% 6% 3% 6%;
+
+  .divConteudo {
     flex-direction: column;
   }
   .valoresT {
@@ -156,34 +167,26 @@ main {
     }
 }
 @media (max-width: 426px) {
-  main {
-    width: 100%;
-    margin-top: 3rem;
-    margin-left: 1.7rem;
+  .Missao_container{
+
+    & h2 {
+      font-size: 1.5rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
   }
-  .SobreNos {
-    margin-left: 2%;
-    gap: 6%;
+
+  .Valores_container{
+
+    & h2 {
+      font-size: 1.5rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
   }
-  .container {
-    width: 95%;
-    margin-bottom: 10%;
-    flex-direction: column;
-  }
-  .valoresT {
-    margin-bottom: 20px;
-  }
-  .H2M,
-  .H2V {
-    font-size: 24px;
-  }
-  .textM,
-  .textV {
-    width: 100%;
-    font-size: 18px;
-  }
-  .Missao {
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
+
 }
