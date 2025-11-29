@@ -7,4 +7,7 @@ const URLunilab =
   const result = json.result[0];
 
   document.getElementById("unilab-link").href = result.unilab;
+  if(document.getElementById("unilab-link-acessar")){
+    document.getElementById("unilab-link-acessar").href = result.unilab;
+  }
 })();

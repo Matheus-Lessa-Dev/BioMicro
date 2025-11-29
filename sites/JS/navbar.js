@@ -26,3 +26,25 @@ if (document.querySelector("#contato-verificacao")) {
     form.reset();
   });
 }
+
+// MENU MOBILE 
+
+const hamburger = document.querySelector("#hamburger");
+const mobileMenu = document.querySelector("#mobile-menu");
+
+// Criar overlay
+let overlay = document.createElement("div");
+overlay.classList.add("menu-overlay");
+document.body.appendChild(overlay);
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+  overlay.classList.add("active");
+});
+
+// Fechar ao clicar no overlay
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
