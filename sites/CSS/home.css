@@ -412,6 +412,10 @@ main {
       font-size: 100%;
     }
   }
+  .carousel-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
   .services__cards {
     gap: 6px;
   }
